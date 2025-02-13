@@ -1,0 +1,17 @@
+package com.example.phonestore.service;
+
+import com.example.phonestore.model.Phone;
+import com.example.phonestore.repository.PhoneRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+
+@Service
+public class PhoneService {
+    @Autowired
+    private PhoneRepository phoneRepository;
+
+    public List<Phone> getAllPhones() {
+        return phoneRepository.findAll();
+    }
+}

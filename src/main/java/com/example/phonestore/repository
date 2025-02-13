@@ -1,0 +1,21 @@
+package com.example.phonestore.repository;
+
+import com.example.phonestore.model.Phone;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class PhoneRepository {
+    private List<Phone> phones = new ArrayList<>();
+
+    public PhoneRepository() {
+        phones.add(new Phone(1L, "iPhone 13", "Apple", 999.99));
+        phones.add(new Phone(2L, "Galaxy S21", "Samsung", 799.99));
+        phones.add(new Phone(3L, "Pixel 6", "Google", 599.99));
+    }
+
+    public List<Phone> findAll() {
+        return phones;
+    }
+}
